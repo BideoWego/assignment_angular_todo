@@ -65,7 +65,7 @@
             </thead>
             <tbody>
 
-              <tr ng-repeat="todo in todos" ng-if="!hideCompleted || (!todo.completed && hideCompleted)" todo></tr>
+              <tr ng-repeat="todo in todos" ng-if="!hideCompleted || (!todo.completed && hideCompleted)" todo="todo" destroy-todo="destroyTodo($index)"></tr>
 
             </tbody>
           </table>

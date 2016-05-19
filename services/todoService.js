@@ -45,7 +45,7 @@ Todo.factory('todoService', function() {
 
 
   service.clearCompleted = function() {
-    for (var i = 0; i < _todos.length; i++) {
+    for (var i = _todos.length - 1; i >= 0; i--) {
       var todo = _todos[i];
       if (todo.completed) {
         service.destroy(i);
